@@ -1,0 +1,342 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fc;
+  color: #20243a;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  background: white;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: #7357e8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+}
+
+.sell-btn, .explore-btn {
+  background: #7357e8;
+  color: white;
+  border: none;
+  padding: 13px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero {
+  padding: 100px 10%;
+  background: linear-gradient(120deg, #211b45, #5540a5);
+  color: white;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.tagline {
+  color: #a997ff;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #b6a5ff;
+}
+
+.hero-content > p:not(.tagline) {
+  line-height: 1.8;
+  color: #e0ddf0;
+  margin-bottom: 30px;
+}
+
+.marketplace {
+  padding: 75px 7%;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  gap: 20px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+}
+
+.search-box {
+  padding: 14px;
+  width: 280px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px #0000000d;
+  transition: 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  height: 170px;
+  background: #eeeaff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.condition {
+  color: #7357e8;
+  background: #eeeaff;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.product-info h3 {
+  margin: 15px 0 8px;
+}
+
+.product-info p {
+  color: #777;
+  font-size: 14px;
+  min-height: 35px;
+}
+
+.product-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.product-bottom strong {
+  font-size: 21px;
+  color: #7357e8;
+}
+
+.product-bottom span {
+  color: #24965c;
+  font-size: 12px;
+}
+
+.message {
+  padding: 30px;
+  text-align: center;
+}
+
+.about {
+  padding: 65px 10%;
+  text-align: center;
+  background: #eeeaff;
+}
+
+.about h2 {
+  margin-bottom: 15px;
+}
+
+.about p {
+  color: #666;
+  line-height: 1.8;
+}
+
+footer {
+  background: #211b45;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+}
+
+
+/* SELL ITEM MODAL */
+
+.sell-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 15, 30, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sell-modal {
+  background: white;
+  color: #24243a;
+  width: 100%;
+  max-width: 480px;
+  padding: 30px;
+  border-radius: 16px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+.sell-modal h2 {
+  margin-bottom: 8px;
+}
+
+.sell-modal > p {
+  color: #777;
+  margin-bottom: 22px;
+}
+
+.close-modal {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  color: #555;
+}
+
+.sell-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sell-modal label {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.sell-modal input,
+.sell-modal textarea,
+.sell-modal select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font: inherit;
+  background: white;
+  color: #24243a;
+}
+
+.sell-modal input:focus,
+.sell-modal textarea:focus,
+.sell-modal select:focus {
+  outline: 2px solid #7555ed;
+  border-color: #7555ed;
+}
+
+.submit-sell-btn {
+  background: #7555ed;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.submit-sell-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-message {
+  color: #c0392b;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .sell-modal {
+    padding: 24px 18px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+}

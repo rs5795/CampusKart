@@ -1,0 +1,40 @@
+
+:root {
+  font-family: Arial, sans-serif;
+  color: #20243a;
+  background: #f8f9fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: block;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: #20243a;
+  background: #f8f9fc;
+}
+
+button, input {
+  font-family: inherit;
+}
+
+input {
+  color: #20243a;
+  background: white;
+}
+
+a {
+  color: inherit;
+}
