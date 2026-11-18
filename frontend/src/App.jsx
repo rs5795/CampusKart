@@ -84,7 +84,7 @@ function App() {
     setSubmitting(true);
 
     const productData = {
-      seller_id: 1,
+      seller_id: 4,
       category_id: Number(form.category_id),
       title: form.title.trim(),
       description: form.description.trim(),
