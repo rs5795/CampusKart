@@ -2,7 +2,12 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 
-const API = 'http://localhost:5001/api/products';
+const API_BASE_URL = (
+  import.meta.env.VITE_API_URL ||
+  'https://campuskart-oek4.onrender.com'
+).replace(/\/$/, '');
+
+const API = `${API_BASE_URL}/api/products`;
 
 function App() {
   const [products, setProducts] = useState([]);
